@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import {  Text, View } from 'react-native'
+import { globalstyles } from '../styles/global'
+
 
 export default function about() {
     return (
-        <View>
+        <View style={globalstyles.container}>
             <Text>About Screen</Text>
         </View>
     )
 }
-
-const styles = StyleSheet.create({})
