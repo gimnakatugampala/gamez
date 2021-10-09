@@ -6,6 +6,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from '../screens/home'
 import ReviewDetails from '../screens/ReviewDetails'
 
+import Header from '../shared/header';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +22,9 @@ const HomeStack = () => {
           headerStyle: {
             backgroundColor: '#eee',
             height:60
-          }}}
+          },
+          headerTitle:() => <Header />
+        }}
         />
         
 
