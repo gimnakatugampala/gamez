@@ -15,10 +15,20 @@ const HomeStack = () => {
         <Stack.Screen
           name="Home"
           component={Home}
+          options={{title:'Gamezone', 
+          headerStyle: {
+            backgroundColor: '#eee',
+            height:60
+          }}}
         />
-        <Stack.Screen name="ReviewDetails" component={ReviewDetails} />
+
+        <Stack.Screen name="ReviewDetails" component={ReviewDetails}  options={{title:'Review Details', headerStyle: {
+            backgroundColor: '#eee', height:60
+          }}} />
+
       </Stack.Navigator>
-    </NavigationContainer>
+      </NavigationContainer>
+      
   );
 };
 
