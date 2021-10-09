@@ -6,11 +6,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from '../screens/home'
 import ReviewDetails from '../screens/ReviewDetails'
 
+
 const Stack = createNativeStackNavigator();
 
 const HomeStack = () => {
   return (
-    <NavigationContainer>
+   <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
           name="Home"
@@ -21,6 +22,7 @@ const HomeStack = () => {
             height:60
           }}}
         />
+        
 
         <Stack.Screen name="ReviewDetails" component={ReviewDetails}  options={{title:'Review Details', headerStyle: {
             backgroundColor: '#eee', height:60
@@ -28,7 +30,6 @@ const HomeStack = () => {
 
       </Stack.Navigator>
       </NavigationContainer>
-      
   );
 };
 

@@ -3,7 +3,7 @@ import { Text, View ,Button} from 'react-native'
 
 import { globalstyles } from '../styles/global'
 
-export default function reviewDetails(props) {
+export default function ReviewDetails(props) {
 
    
 
