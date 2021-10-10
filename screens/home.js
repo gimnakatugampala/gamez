@@ -10,6 +10,7 @@ export default function home({navigation}) {
         {title:'Test 1',rating:5,body:'lorem lorem',key:'1'},
         {title:'Test 2',rating:3,body:'lorem lorem',key:'2'},
         {title:'Test 3',rating:5,body:'lorem lorem',key:'3'},
+        {title:'Test 4',rating:2,body:'lorem lorem',key:'4'},
     ])
 
     
