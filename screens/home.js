@@ -1,10 +1,12 @@
 import React,{useState} from 'react'
-import {  Text, View ,TouchableOpacity,FlatList } from 'react-native'
+import {  Text, View ,TouchableOpacity,FlatList,Modal,StyleSheet } from 'react-native'
 import { globalstyles } from '../styles/global'
 
 import Card from '../shared/Card'
 
 export default function home({navigation}) {
+
+    const [modalOpen, setmodalOpen] = useState(false)
 
     const [reviews, setReviews] = useState([
         {title:'Test 1',rating:5,body:'lorem lorem',key:'1'},
@@ -16,6 +18,16 @@ export default function home({navigation}) {
     
     return (
         <View style={globalstyles.container}>
+
+            <Modal visible={modalOpen} animationType='slide'>
+                <View style={styles.modalContent}>
+             <Text onPress={() => setmodalOpen(false)} style={globalstyles.icon}>X</Text>
+                    <Text>Hello from the modal :)</Text>
+                </View>
+            </Modal>
+
+            <Text  style={globalstyles.icon} onPress={() => setmodalOpen(true)}>+</Text>
+
            <FlatList 
            data={reviews}
            renderItem={({item}) => (
@@ -30,3 +42,9 @@ export default function home({navigation}) {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    modalContent:{
+        flex:1
+    }
+})

@@ -9,7 +9,7 @@ const header = () => {
 
     return (
         <ImageBackground source={require('../assets/game_bg.png')} style={styles.header}>
-                <Text style={styles.icon}>X</Text>
+              
           <View style={styles.headerTitle}>
               <Image source={require('../assets/heart_logo.png')} style={styles.headerImage} />
 

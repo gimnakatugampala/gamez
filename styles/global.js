@@ -13,6 +13,12 @@ export const globalstyles = StyleSheet.create({
     paragraph:{
         marginVertical:8,
         lineHeight:20
+    },
+    icon:{
+        fontSize:25,
+        fontWeight:'bold',
+        textAlign:'center',
+        margin:5
     }
 })
 
