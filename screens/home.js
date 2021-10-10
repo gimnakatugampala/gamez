@@ -5,7 +5,6 @@ import { globalstyles } from '../styles/global'
 import ReviewForm from './reviewForm'
 
 import Card from '../shared/Card'
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 
 export default function home({navigation}) {
 
@@ -33,12 +32,12 @@ export default function home({navigation}) {
         <View style={globalstyles.container}>
 
             <Modal visible={modalOpen} animationType='slide'>
-              <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+           
                 <View style={styles.modalContent}>
              <Text onPress={() => setmodalOpen(false)} style={globalstyles.icon}>X</Text>
                     <ReviewForm addReview={addReview} />
                 </View>
-                </TouchableWithoutFeedback>
+            
             </Modal>
 
             <Text  style={globalstyles.icon} onPress={() => setmodalOpen(true)}>+</Text>
