@@ -1,10 +1,11 @@
 import React,{useState} from 'react'
-import {  Text, View ,TouchableOpacity,FlatList,Modal,StyleSheet } from 'react-native'
+import {  Text, View ,TouchableOpacity,FlatList,Modal,StyleSheet, Keyboard } from 'react-native'
 import { globalstyles } from '../styles/global'
 
 import ReviewForm from './reviewForm'
 
 import Card from '../shared/Card'
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 
 export default function home({navigation}) {
 
@@ -17,15 +18,27 @@ export default function home({navigation}) {
         {title:'Test 4',rating:2,body:'lorem lorem',key:'4'},
     ])
 
+
+    const addReview = (review) =>{
+        review.key = Math.random().toString()
+        setReviews((currentReviews) =>{
+            return [review, ...currentReviews]
+        })
+
+        setmodalOpen(false)
+    }
+
     
     return (
         <View style={globalstyles.container}>
 
             <Modal visible={modalOpen} animationType='slide'>
+              <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                 <View style={styles.modalContent}>
              <Text onPress={() => setmodalOpen(false)} style={globalstyles.icon}>X</Text>
-                    <ReviewForm />
+                    <ReviewForm addReview={addReview} />
                 </View>
+                </TouchableWithoutFeedback>
             </Modal>
 
             <Text  style={globalstyles.icon} onPress={() => setmodalOpen(true)}>+</Text>
