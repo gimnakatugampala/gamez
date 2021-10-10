@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import {  Text, View ,TouchableOpacity,FlatList,Modal,StyleSheet } from 'react-native'
 import { globalstyles } from '../styles/global'
 
+import ReviewForm from './reviewForm'
+
 import Card from '../shared/Card'
 
 export default function home({navigation}) {
@@ -22,7 +24,7 @@ export default function home({navigation}) {
             <Modal visible={modalOpen} animationType='slide'>
                 <View style={styles.modalContent}>
              <Text onPress={() => setmodalOpen(false)} style={globalstyles.icon}>X</Text>
-                    <Text>Hello from the modal :)</Text>
+                    <ReviewForm />
                 </View>
             </Modal>
 

@@ -19,6 +19,14 @@ export const globalstyles = StyleSheet.create({
         fontWeight:'bold',
         textAlign:'center',
         margin:5
+    },
+    input:{
+        borderWidth:1,
+        borderColor:'#ddd',
+        padding:10,
+        fontSize:18,
+        borderRadius:6,
+        marginVertical:10
     }
 })
 
